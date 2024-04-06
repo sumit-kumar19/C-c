@@ -37,7 +37,7 @@ void display(int arr[], int n){
 
 }
 int main() {
- int n,c=0;
+ int n;
  printf("Enter the size: ");
  scanf("%d",&n);
  int arr[n];
