@@ -4,6 +4,9 @@ using namespace std;
 void solve(){
      string str;
      cin>>str;
+     if(str!=0)
+     return true;
+     return false;
 }
  int main(){
     ios::sync_with_stdio(0);
