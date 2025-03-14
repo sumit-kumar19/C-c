@@ -33,7 +33,7 @@ public:
                 ans*=10;
                 count[0]--;
             }
-            for(int i=0;i<10;i++){
+            for(int i=ii;i<10;i++){
                 while(count[i]>0){
                     ans=ans*10+i;
                     count[i]--;
