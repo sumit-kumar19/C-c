@@ -21,16 +21,20 @@ public:
        for(int i=0;i<edges.size();i++){
         if(edges[i][0]>edges[i][1])swap(edges[i][0],edges[i][1]);
        }
+
        for(auto it:edges){
          if(st.find({it[0],it[1]})==st.end())st[{it[0],it[1]}]=it[2];
          else st[{it[0],it[1]}]&=it[2];
        }
+
+
        for(auto it:edges){
         int wt=st[{it[0],it[1]}];
-        cout<<wt<<endl;
         adj[it[0]].push_back({it[1],wt});
         adj[it[1]].push_back({it[0],wt});
        }
+
+
        vector<int>ans,vis(n,0);
        for(int i=0;i<n;i++){
          if(!vis[i]){
@@ -40,6 +44,8 @@ public:
 
          }
        }
+
+       
         for(auto it:query){
           int p=-1;
           if(mp1[it[0]]==mp1[it[1]]){
